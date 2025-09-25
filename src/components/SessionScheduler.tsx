@@ -211,13 +211,13 @@ const SessionScheduler: React.FC<SessionSchedulerProps> = ({ onNavigate }) => {
                   transition={{ duration: 0.3 }}
                 >
                   <ListItem
-                    button
+                    component="div"
                     onClick={() => setSelectedPatient(patient)}
-                    selected={selectedPatient?.id === patient.id}
                     sx={{
                       border: 1,
                       borderColor: selectedPatient?.id === patient.id ? 'primary.main' : 'divider',
                       borderRadius: 1,
+                      backgroundColor: selectedPatient?.id === patient.id ? 'action.selected' : 'inherit',
                       mb: 1,
                       '&:hover': {
                         boxShadow: 2,
